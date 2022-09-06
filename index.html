@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <!-- code was borrowed from: https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/ -->
     <section class="game">
@@ -26,13 +28,27 @@
             </div>
         </div>
 
-        <div class="action"></div>
-        <div class="actions-left"></div>
-        <div class="options"></div>
+        <div class="move">Choose your weapon</div>
+
+        <!-- number of moves left before game ends -->
+        <div class="move-left">Chances left: 10</div>
+
+        <!-- options available for player to play game -->
+        <div class="options">
+            <button class="sword">Sword</button>
+            <button class="axe">Axe</button>
+            <button class="spear">Spear</button>
+        </div>
+
+        <!-- final result of the game -->
         <div class="result"></div>
+
+        <!-- reloads the game -->
         <button class="reload"></button>
+
     </section>
-    
+
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
