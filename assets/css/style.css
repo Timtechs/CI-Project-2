@@ -1,3 +1,4 @@
+/* Code from: https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/ */
 /* applies to the whole dosument */
 * {
     padding: 0;
@@ -5,4 +6,22 @@
     box-sizing: border-box;
     background: #222831;
     color: #f2f2f2;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end of code from geeksforgeeks */
+
+.title {
+    color: #f96d00;
+    font-size: 500%;
+    position: absolute;
+    top: 0;
 }
