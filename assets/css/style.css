@@ -19,9 +19,26 @@
 
 /* end of code from geeksforgeeks */
 
+/* title styling/position */
 .title {
     color: #f96d00;
     font-size: 500%;
     position: absolute;
     top: 0;
+}
+
+/* also from geeksforfeeks */
+.score {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 10%;
+}
+/* end of code geeksforgeeks */
+
+.p-count, .c-count {
+    text-align: center;
+    font-size: 150%;
+    margin-top: 2%;
 }
