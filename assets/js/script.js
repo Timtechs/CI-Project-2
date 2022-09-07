@@ -1,4 +1,4 @@
-//wait for DOM to finish loading before running game
+// add wait for DOM to finish loading before running game
 
 function game() {
     let playerScore = 0;
