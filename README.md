@@ -18,6 +18,6 @@
 * The code for the HTML gamepart of the code come from: [Geeksforgeeks](https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/).
 * Some code in CSS is also from: [Geeksforgeeks](https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/).
     * The code from [Geeksforgeeks](https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/) was used to increase the time i have to work on the Javascript.
-* The Javascript was written using the guide on the [GeeksforGeeks](https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/) webpage.
-
-![Guide image](assets/images/guide.jpg)
+### also
+* Used [W3schools](https://www.w3schools.com/js/js_arrays.asp) to remind myself how to make an array for javascript
+* Used [W3schools](https://www.w3schools.com/js/js_array_const.asp) to understand that i should use const in some cases in my code
