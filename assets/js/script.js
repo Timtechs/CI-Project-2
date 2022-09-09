@@ -1,83 +1,64 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+let OPTIONS = ['sword', 'axe', 'lance'];
+let dCount = 0;
+let pCount = 0;
+let cCount = 0;
 
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            runGame()
-        })
-    }
-})
+function initializeGame() {
+    document.getElementById('sword').addEventListener('click', selectUserOption);
+    document.getElementById('axe').addEventListener('click', selectUserOption);
+    document.getElementById('lance').addEventListener('click', selectUserOption);
+}
 
+document.addEventListener("DOMContentLoaded", initializeGame);
 
+/** js doc
+ **/
+function selectUserOption(event) {
+    userSelection = event;
+    computerSelection = generateComputerSelection();
+    displayWinner(userSelection, computerSelection);
+}
 
-function runGame() {
-    document.getElementsByClassName("pCount").value = "";
-    document.getElementsByClassName("cCount").value = "";
-    document.getElementsByClassName("dCount").value = "";
+function generateComputerSelection() {
+    Math.floor(Math.random(OPTIONS) * 3);
+}
 
-    let game = ["sword", "axe", "lance"]
-    for (let i = 0; i < game; i++);
+function checkWinner(userSelection, computerSelection) {
+    if (userSelection === 'sword' && computerSelection === 'axe') {
+        return userSelection;
 
-    let swordBtn = document.getElementsByClassName("sword");
-    let axeBtn = document.getElementsByClassName("axe");
-    let lanceBtn = document.getElementsByClassName("lance");
-    let playerChoice = [swordBtn, axeBtn, lanceBtn];
-    let computerNumberChoice = Math.floor(Math.random()*3);
-    let computerChoice = game[computerNumberChoice];
+    } else if (userSelection === 'sword' && computerSelection === 'lance') {
+        return computerSelection;
 
-    if (playerChoice === swordBtn) {
-        if (computerChoice === game[0]) {
-            let olddCount = parseInt(document.getElementsByClassName("dCount").innerText);
-            document.getElementsByClassName("dCount").innerText = ++olddCount;
-        }   else if (computerChoice === game[1]) {
-            let oldpCount = parseInt(document.getElementsByClassName("pCount").innerText);
-            document.getElementsByClassName("pCount").innerText = ++oldpCount;
-        }   else if (computerChoice === game[2]) {
-            let oldcCount = parseInt(document.getElementsByClassName("cCount").innerText);
-            document.getElementsByClassName("cCount").innerText = ++oldcCount;
-        } else {
-            alert("Error")
-        }
-    }
+    } else if (userSelection === 'axe' && computerSelection === 'lance') {
+        return userSelection
 
-    if (playerChoice === axeBtn) {
-        if (computerChoice === game[0]) {
-            let oldcCount = parseInt(document.getElementsByClassName("cCount").innerText);
-            document.getElementsByClassName("cCount").innerText = ++oldcCount;
-        }   else if (computerChoice === game[1]) {
-            let olddCount = parseInt(document.getElementsByClassName("dCount").innerText);
-            document.getElementsByClassName("dCount").innerText = ++olddCount;
-        }   else if (computerChoice === game[2]) {
-            let oldpCount = parseInt(document.getElementsByClassName("pCount").innerText);
-            document.getElementsByClassName("pCount").innerText = ++oldpCount;
-        } else {
-            alert("Error")
-        }
-    }
+    } else if (userSelection === 'axe' && computerSelection === 'sword') {
+        return computerSelection
 
-    if (playerChoice === lanceBtn) {
-        if (computerChoice === game[0]) {
-            let oldpCount = parseInt(document.getElementsByClassName("pCount").innerText);
-            document.getElementsByClassName("pCount").innerText = ++oldpCount;
-        }   else if (computerChoice === game[1]) {
-            let oldcCount = parseInt(document.getElementsByClassName("cCount").innerText);
-            document.getElementsByClassName("cCount").innerText = ++oldcCount;
-        }   else if (computerChoice === game[2]) {
-            let olddCount = parseInt(document.getElementsByClassName("dCount").innerText);
-            document.getElementsByClassName("dCount").innerText = ++olddCount;
-        } else {
-            alert("Error")
-        }
+    } else if (userSelection === 'lance' && computerSelection === 'sword') {
+        return userSelection
+
+    } else if (userSelection === 'lance' && computerSelection === 'axe') {
+        return computerSelection
+    } else {
+        alert("Error")
     }
 }
 
-function increaseScore() {
-    let oldpCount = parseInt(document.getElementsByClassName("pCount").innerText);
-    document.getElementsByClassName("pCount").innerText = ++oldpCount;
+function incrementWinnerCount(userSelection, computerSelection) {
+    if (userSelection === computerSelection) {
+        dCount++;
+        return;
+    }
+    let winner = checkWinner(userSelection, computerSelection);
+    if (winner === userSelection) {
+        pCount++;
+    } else {
+        cCount++;
+    }
+}
 
-    let oldcCount = parseInt(document.getElementsByClassName("cCount").innerText);
-    document.getElementsByClassName("cCount").innerText = ++oldcCount;
-
-    let olddCount = parseInt(document.getElementsByClassName("dCount").innerText);
-    document.getElementsByClassName("dCount").innerText = ++olddCount;
+function displayWinner(userSelection, computerSelection) {
+    incrementWinnerCount(userSelection, computerSelection)
 }
