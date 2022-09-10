@@ -11,31 +11,32 @@
 
 <body>
     <!-- code was borrowed from: https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/ -->
-    <section class="game">
+    <section id="game">
 
         <!-- title -->
-        <div class="title">Sword Axe Lance</div>
+        <div id="title">Sword Axe Lance</div>
 
-        <div class="move">Choose your weapon</div>
+        <div id="move">Choose your weapon</div>
 
         <!-- number of moves left before game ends -->
-        <div class="move-left">Chances left: 10</div>
+        <div id="move-left">Chances left: 10</div>
 
         <!-- options available for player to play game -->
-        <span id="pCount">0</span>
-        <span id="cCount">0</span>
-        <span id="dCount">0</span>
+        <div id="flex">
+            <span id="pCount">0</span>
+            <span id="cCount">0</span>
+            <span id="dCount">0</span>
 
-        <button id="sword">Sword</button>
-        <button id="axe">Axe</button>
-        <button id="lance">Lance</button>
-
+            <button id="sword">Sword</button>
+            <button id="axe">Axe</button>
+            <button id="lance">Lance</button>
+        </div>
 
         <!-- final result of the game -->
-        <div class="result"></div>
+        <div id="result"></div>
 
         <!-- reloads the game -->
-        <button class="reload"></button>
+        <button id="reload"></button>
 
     </section>
     <!-- end of borrowed code -->

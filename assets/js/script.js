@@ -2,6 +2,8 @@ let OPTIONS = ['sword', 'axe', 'lance'];
 let dCount = 0;
 let pCount = 0;
 let cCount = 0;
+let userSelection = OPTIONS;
+let computerSelection = OPTIONS;
 
 function initializeGame() {
     document.getElementById('sword').addEventListener('click', selectUserOption);
@@ -14,13 +16,14 @@ document.addEventListener("DOMContentLoaded", initializeGame);
 /** js doc
  **/
 function selectUserOption(event) {
-    userSelection = event;
+    userSelection = event.target.innerHTML;
     computerSelection = generateComputerSelection();
     displayWinner(userSelection, computerSelection);
 }
 
 function generateComputerSelection() {
-    Math.floor(Math.random(OPTIONS) * 3);
+    Math.floor(Math.random() * computerSelection.length);
+    return 
 }
 
 function checkWinner(userSelection, computerSelection) {
@@ -31,18 +34,18 @@ function checkWinner(userSelection, computerSelection) {
         return computerSelection;
 
     } else if (userSelection === 'axe' && computerSelection === 'lance') {
-        return userSelection
+        return userSelection;
 
     } else if (userSelection === 'axe' && computerSelection === 'sword') {
-        return computerSelection
+        return computerSelection;
 
     } else if (userSelection === 'lance' && computerSelection === 'sword') {
-        return userSelection
+        return userSelection;
 
     } else if (userSelection === 'lance' && computerSelection === 'axe') {
-        return computerSelection
+        return computerSelection;
     } else {
-        alert("Error")
+        alert("Error");
     }
 }
 
@@ -60,5 +63,5 @@ function incrementWinnerCount(userSelection, computerSelection) {
 }
 
 function displayWinner(userSelection, computerSelection) {
-    incrementWinnerCount(userSelection, computerSelection)
+    incrementWinnerCount(userSelection, computerSelection);
 }
