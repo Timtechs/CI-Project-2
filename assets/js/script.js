@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", initializeGame);
 /** js doc
  **/
 function selectUserOption(event) {
-    userSelection = event.target.innerHtml;
+    userSelection = event.target.innerhtml;
     computerSelection = generateComputerSelection();
     displayWinner(userSelection, computerSelection);
     console.log(computerSelection)
 }
 
 function generateComputerSelection() {
-    Math.floor(Math.random() * computerSelection.length -1);
+    let computerSelection = Math.floor(Math.random() * 2);
     return computerSelection;
 }
 
@@ -49,6 +49,7 @@ function checkWinner(userSelection, computerSelection) {
         alert("Error");
         console.log(alert);
     }
+    console.log(userSelection)
 }
 
 function incrementWinnerCount(userSelection, computerSelection) {
@@ -59,6 +60,7 @@ function incrementWinnerCount(userSelection, computerSelection) {
     let winner = checkWinner(userSelection, computerSelection);
     if (winner === userSelection) {
         pCount++;
+
     } else {
         cCount++;
     }
