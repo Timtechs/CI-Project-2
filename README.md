@@ -4,9 +4,28 @@
 
 ## Features
 
+* Title
+    * The title is a simple design that shows the games name
+
+![image of title](assets/images/title.jpg)
+
+* Game area
+    * Game area with 3 choices and a scorecount for player, computer and a draw
+
+![image of the game area](assets/images/gamearea.jpg)
+
+* Footer
+    * We also have a footer with the rules of the game
+
+![image of footer with rules to the game](assets/images/footer.jpg)
+
 ## Testing
 
+* This game is still unfinished
+
 ## Bugs
+
+* No known bugs
 
 ## Validator Testing
 
