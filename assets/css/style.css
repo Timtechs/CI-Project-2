@@ -8,6 +8,28 @@
     color: #f2f2f2;
 }
 
+/* title styling/position this code is not form geeksforgeeks */
+#title {
+    color: #f96d00;
+    font-size: 700%;
+    top: 0;
+    text-align: center;
+}
+
+#rules {
+    font-size: 400%;
+    text-align: center;
+    width: 100%;
+}
+
+#rules,
+h2,
+p {
+    color: #f96d00;
+}
+
+/* end of my own code */
+
 #game {
     display: flex;
     flex-direction: column;
@@ -17,31 +39,33 @@
     align-items: center;
 }
 
-/* end of code from geeksforgeeks */
-
-/* title styling/position */
-#title {
-    color: #f96d00;
-    font-size: 500%;
-    position: absolute;
-    top: 0;
+#flexLabel {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
 }
 
-/* also from geeksforfeeks */
+#flexLabel,
+label {
+    color: #f96d00;
+}
+
 #flex {
     display: flex;
     width: 30%;
     justify-content: space-evenly;
-    position: absolute;
-    top: 10%;
+}
+
+#flex,
+span {
+    color: #f96d00;
 }
 
 #flexChoice {
     display: flex;
     width: 30%;
     justify-content: space-evenly;
-    position: absolute;
-    top: 20%;
+    margin-top: 2%;
 }
 
 /* end of code geeksforgeeks */
@@ -58,11 +82,6 @@
     font-size: 300%;
     color: #f96d00;
     font-weight: bold;
-}
-
-#move-left {
-    font-size: 200%;
-    color: #f96d00;
 }
 
 /* buttons next to eachother */
@@ -84,50 +103,142 @@
     color: #f96d00;
 }
 
-/* styling reload button */
-#reload {
-    display: none;
-    margin-top: 4%;
-    font-size: 140%;
-    padding: 0.5%;
-    border: 4px solid #f2f2f2;
-    background-color: #393e46;
-    color: #f96d00;
-}
-
-/* more code from geeksforgeeks */
-#result {
-    margin-top: 20px;
-    font-size: 1.2rem;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 612px) {
+/* media queries */
+/* for smaller screens 270px and up */
+@media (min-width: 270px) {
     #title {
+        color: #f96d00;
+        font-size: 230%;
+        top: 0;
         text-align: center;
     }
 
-    #score {
-        position: absolute;
-        top: 200px;
+    #rules {
+        font-size: 90%;
+        text-align: center;
+        width: 100%;
+    }
+
+    #rules,
+    h2,
+    p {
+        color: #f96d00;
+    }
+
+    #move {
+        font-size: 100%;
+        color: #f96d00;
+        font-weight: bold;
+    }
+
+    #flexLabel {
         width: 100vw;
     }
 
-    #options {
+    #flex {
+        width: 100vw;
+    }
+
+    #flexChoice {
         width: 100vw;
     }
 }
 
-#footer {
-    position: absolute;
-    font-size: 200%;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
+/* for small screens 400px and up */
+@media (min-width: 400px) {
+    #title {
+        color: #f96d00;
+        font-size: 300%;
+        top: 0;
+        text-align: center;
+    }
+
+    #rules {
+        font-size: 150%;
+        text-align: center;
+        width: 100%;
+    }
+
+    #rules,
+    h2,
+    p {
+        color: #f96d00;
+    }
+
+    #move {
+        font-size: 150%;
+        color: #f96d00;
+        font-weight: bold;
+    }
 }
 
-#footer,
-h2,
-p {
-    color: #f96d00;
+/* for medium screens 600px and up */
+@media (min-width: 600px) {
+    #title {
+        color: #f96d00;
+        font-size: 300%;
+        top: 0;
+        text-align: center;
+    }
+
+    #rules {
+        font-size: 150%;
+        text-align: center;
+        width: 100%;
+    }
+
+    #rules,
+    h2,
+    p {
+        color: #f96d00;
+    }
+
+    #move {
+        font-size: 150%;
+        color: #f96d00;
+        font-weight: bold;
+    }
+
+    #flexChoice {
+        width: 50%;
+    }
+}
+
+/* for bigger screens 1700px and up */
+@media (min-width: 1700px) {
+    #title {
+        color: #f96d00;
+        font-size: 900%;
+        top: 0;
+        text-align: center;
+    }
+
+    #rules {
+        font-size: 350%;
+        text-align: center;
+        width: 100%;
+    }
+
+    #rules,
+    h2,
+    p {
+        color: #f96d00;
+    }
+
+    #move {
+        font-size: 250%;
+        color: #f96d00;
+        font-weight: bold;
+    }
+
+    #flexLabel,
+    #flex,
+    #flexChoice {
+        font-size: 200%;
+    }
+
+    #flexChoice {
+        width: 40%;
+    }
+
 }

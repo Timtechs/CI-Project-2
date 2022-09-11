@@ -1,9 +1,9 @@
-let OPTIONS = ['sword', 'axe', 'lance'];
+const OPTIONS = ['sword', 'axe', 'lance'];
 let dCount = 0;
 let pCount = 0;
 let cCount = 0;
-let userSelection = OPTIONS;
-let computerSelection = OPTIONS;
+let userSelection = null;
+let computerSelection = null;
 
 function initializeGame() {
     document.getElementById('sword').addEventListener('click', selectUserOption);
@@ -23,7 +23,7 @@ function selectUserOption(event) {
 }
 
 function generateComputerSelection() {
-    let computerSelection = Math.floor(Math.random() * 2);
+    let computerSelection = Math.floor(Math.random() * 3);
     return OPTIONS[computerSelection];
 }
 

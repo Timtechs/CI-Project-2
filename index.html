@@ -10,45 +10,39 @@
 </head>
 
 <body>
-    <!-- code was borrowed from: https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/ -->
     <section id="game">
-
         <!-- title -->
         <div id="title">Sword Axe Lance</div>
 
+        <div id="rules">
+            <h2>Rules:</h2>
+            <p>Sword beats Axe, Axe beats Lance, Lance beats Sword</p>
+            <img src="assets/images/rules.jpg" alt="image showing the rules of the game">
+        </div>
+
+        <!-- some code was borrowed from: https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/ -->
+
         <div id="move">Choose your weapon</div>
 
-        <!-- number of moves left before game ends -->
-        <div id="move-left">Chances left: 10</div>
-
         <!-- options available for player to play game -->
+        <div id="flexLabel">
+            <label>Player:</label>
+            <label>Computer:</label>
+            <label>Draw:</label>
+        </div>
         <div id="flex">
             <span id="pCount">0</span>
             <span id="cCount">0</span>
             <span id="dCount">0</span>
         </div>
         <div id="flexChoice">
+            <label for="sword"></label>
             <button id="sword">sword</button>
             <button id="axe">axe</button>
             <button id="lance">lance</button>
         </div>
 
-        <!-- final result of the game -->
-        <div id="result"></div>
-
-        <!-- reloads the game -->
-        <button id="reload"></button>
-
     </section>
-    <!-- end of borrowed code -->
-
-    <div id="footer-div">
-        <footer id="footer">
-            <h2>Rules:</h2>
-            <p>Sword beats Axe, Axe beats Lance, Lance beats Sword</p>
-            <img src="assets/images/rules.jpg" alt="image showing the rules of the game">
-        </footer>
-    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
