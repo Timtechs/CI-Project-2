@@ -2,6 +2,11 @@
 
  This game is like "Rock Papers Scissors" with a fun twist, its three choices of Sword, Axe or Lance. The Sword beats the Axe due to the Swords many different attack patterns. The Axe beats the Lance due to it being able to split the Lance in two. The Lance beats the Sword due to its superior lenght and thrust capabillities.
 
+## User story
+* As a visiting user, I would like to play a quick game of Sword Axe an Lance (SAL for short) 
+* As a game user, I should notice that the game has a score UI
+* As a game user, I should notice the rules of the game
+
 ## Features
 
 * Title
