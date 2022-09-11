@@ -45,11 +45,7 @@ function checkWinner(userSelection, computerSelection) {
 
     } else if (userSelection === 'lance' && computerSelection === 'axe') {
         return computerSelection;
-    } else {
-        alert("Error");
-        console.log(alert);
     }
-    console.log(userSelection);
 }
 
 function incrementWinnerCount(userSelection, computerSelection) {
@@ -68,4 +64,7 @@ function incrementWinnerCount(userSelection, computerSelection) {
 
 function displayWinner(userSelection, computerSelection) {
     incrementWinnerCount(userSelection, computerSelection);
+    document.getElementById('pCount').innerHTML = pCount;
+    document.getElementById('cCount').innerHTML = cCount;
+    document.getElementById('dCount').innerHTML = dCount;
 }
