@@ -28,22 +28,22 @@ function generateComputerSelection() {
 }
 
 function checkWinner(userSelection, computerSelection) {
-    if (userSelection === 'sword' && computerSelection === 'axe') {
+    if (userSelection === 'Sword' && computerSelection === 'axe') {
         return userSelection;
 
-    } else if (userSelection === 'sword' && computerSelection === 'lance') {
+    } else if (userSelection === 'Sword' && computerSelection === 'lance') {
         return computerSelection;
 
-    } else if (userSelection === 'axe' && computerSelection === 'lance') {
+    } else if (userSelection === 'Axe' && computerSelection === 'lance') {
         return userSelection;
 
-    } else if (userSelection === 'axe' && computerSelection === 'sword') {
+    } else if (userSelection === 'Axe' && computerSelection === 'sword') {
         return computerSelection;
 
-    } else if (userSelection === 'lance' && computerSelection === 'sword') {
+    } else if (userSelection === 'Lance' && computerSelection === 'sword') {
         return userSelection;
 
-    } else if (userSelection === 'lance' && computerSelection === 'axe') {
+    } else if (userSelection === 'Lance' && computerSelection === 'axe') {
         return computerSelection;
     } else {
         alert("Error");
