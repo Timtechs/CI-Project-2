@@ -14,6 +14,11 @@ function initializeGame() {
 document.addEventListener("DOMContentLoaded", initializeGame);
 
 /** js doc
+ * userinput recieved
+ * computerSelection generates a choice
+ * userSelection/computerSelection inputs sent to checkWinner()
+ * checkWinner() sent to incrementWinnerCount()
+ * incrementWinnerCount() sent to displayWinner()
  **/
 function selectUserOption(event) {
     userSelection = event.target.innerHTML;
